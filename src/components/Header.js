@@ -57,9 +57,7 @@ function Header({ showPopup = true }) {
         <>
           <div className={`hamb ${isPopupOpen ? 'open' : ''}`} onClick={togglePopup} ref={hambRef}>
             <div className="hamb__field" id="hamb">
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
+              <span className="hamb_title">Услуги</span>
             </div>
           </div>
           {isPopupOpen && <div className="overlay" onClick={closePopup}></div>}

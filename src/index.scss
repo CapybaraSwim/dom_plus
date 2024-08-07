@@ -122,6 +122,15 @@ legend {
 .hamb {
   display: none;
 }
+.hamb_title{ 
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px #FED169 solid;
+  padding: 5px;
+  color: #FED169;
+}
 
 .popup {
   display: none;
