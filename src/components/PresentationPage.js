@@ -7,13 +7,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 
 const area = [
-  { id: 1, name: '60м2', img: '/img/houses/house1.png' },
-  { id: 2, name: '60м2', img: '/img/houses/house2.png' },
-  { id: 3, name: '60м2', img: '/img/houses/house3.png' },
-  { id: 4, name: '60м2', img: '/img/houses/house4.png' },
-  { id: 5, name: '60м2', img: '/img/houses/house5.png' },
-  { id: 6, name: '60м2', img: '/img/houses/house6.png' },
-  { id: 7, name: '60м2', img: '/img/houses/house7.png' },
+  { id: 1, name: '69,8м2', img: '/img/houses/house1.png' },
+  { id: 2, name: '82,6м2', img: '/img/houses/house2.png' },
+  { id: 3, name: '88,8м2', img: '/img/houses/house3.png' },
+  { id: 4, name: '97,5м2', img: '/img/houses/house4.png' },
+  { id: 5, name: '125,2м2', img: '/img/houses/house5.png' },
+  { id: 6, name: '139,7м2', img: '/img/houses/house6.png' },
+  { id: 7, name: '162м2', img: '/img/houses/house7.png' },
 ];
 
 function PresentationPage() {

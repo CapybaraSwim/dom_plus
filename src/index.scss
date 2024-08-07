@@ -395,6 +395,11 @@ legend {
 .presentation_page__main {
   margin: 130px 20vw 0px 6.77vw;
 }
+.presentation_page{
+  .presentation_page__main {
+    margin: 130px 10vw 0px 6.77vw;
+  }
+}
 
 .presentation_page__title {
   display: flex;
@@ -467,7 +472,8 @@ legend {
 
 .house_card img {
   border-radius: 5px;
-  max-height: 300px;
+  max-height: 350px;
+  object-fit:contain;
   max-width: 100%;
 }
 
