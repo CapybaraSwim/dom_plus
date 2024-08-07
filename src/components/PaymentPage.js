@@ -12,7 +12,7 @@ const PaymentPage = () => {
   const [selectedOption, setSelectedOption] = useState(state.paymentMethod);
   useEffect(() => {
     updateState('discount', 7);
-  }, [updateState]);
+  }, []);
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   };

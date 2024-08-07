@@ -12,7 +12,7 @@ const PlaceForConstruction = () => {
   const [selectedOption, setSelectedOption] = useState(state.placeForConstruction);
   useEffect(() => {
     updateState('discount', 3);
-  }, [updateState]);
+  }, []);
   const handleOptionClick = (option) => {
     setSelectedOption(option);
   };

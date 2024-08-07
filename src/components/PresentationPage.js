@@ -23,7 +23,7 @@ function PresentationPage() {
   const [selectedHouse, setSelectedHouse] = useState(state.houseSize);
   useEffect(() => {
     updateState('discount', 0);
-  }, [updateState]);
+  }, []);
   const handleHouseClick = (houseId) => {
     setSelectedHouse(houseId);
   };
