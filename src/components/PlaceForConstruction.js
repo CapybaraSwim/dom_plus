@@ -1,0 +1,65 @@
+import React, { useState, useContext, useEffect } from 'react';
+import Header from './Header';
+import Sidebar from './Sidebar';
+import Footer from './Footer';
+import '../index.scss';
+import { Link, useNavigate } from 'react-router-dom';
+import { AppContext } from '../context/AppContext';
+
+const PlaceForConstruction = () => {
+  const navigate = useNavigate();
+  const { state, updateState } = useContext(AppContext);
+  const [selectedOption, setSelectedOption] = useState(state.placeForConstruction);
+  useEffect(() => {
+    updateState('discount', 3);
+  }, [updateState]);
+  const handleOptionClick = (option) => {
+    setSelectedOption(option);
+  };
+
+  const handlePageClick = (event) => {
+    if (!event.target.closest('.grid_text')) {
+      setSelectedOption(null);
+    }
+  };
+
+  const handleNextClick = () => {
+    updateState('placeForConstruction', selectedOption);
+    navigate('/paymentPage');
+  };
+
+  return (
+    <div className="placeForConstruction_page" onClick={handlePageClick}>
+      <Header />
+      <div className="presentation_flex">
+        <main className="presentation_page__main">
+          <div className="presentation_page__title">
+            <Link to="/presentation" className="back_arrow">
+              <img className="arrow_back" src="/img/Arrow.svg" alt="Назад" />
+            </Link>
+            <h2>Выбрали место для строительства?</h2>
+          </div>
+          <div className="grid_container">
+            <img src="/img/field.png" alt="field" className="grid_image" />
+            <div
+              className={`grid_text already_have_plot ${selectedOption === 'have' ? 'selected' : ''}`}
+              onClick={() => handleOptionClick('have')}
+            >
+              Уже есть участок
+            </div>
+            <div
+              className={`grid_text need_find_plot ${selectedOption === 'find' ? 'selected' : ''}`}
+              onClick={() => handleOptionClick('find')}
+            >
+              Нужно найти участок
+            </div>
+          </div>
+        </main>
+        <Sidebar />
+      </div>
+      <Footer progress={33} handleNextClick={handleNextClick} />
+    </div>
+  );
+};
+
+export default PlaceForConstruction;

@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './index.scss';
+import HomePage from './components/HomePage';
+import PresentationPage from './components/PresentationPage';
+import PlaceForConstruction from './components/PlaceForConstruction';
+import PaymentPage from './components/PaymentPage';
+import FormPage from './components/FormPage';
+import { Routes, Route } from 'react-router-dom';
+import { AppProvider } from './context/AppContext';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/presentation" element={<PresentationPage />} />
+        <Route path="/placeForConstruction" element={<PlaceForConstruction/>} />
+        <Route path="/paymentPage" element={<PaymentPage/>} />
+        <Route path="/formPage" element={<FormPage/>} />
+      </Routes>
+    </AppProvider>
   );
 }
+
 
 export default App;

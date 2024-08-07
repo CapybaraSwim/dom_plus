@@ -1,0 +1,378 @@
+
+//-------PresentationPage------
+
+@media (max-width: 768px) {
+  .presentation_flex {
+    flex-direction: column !important;
+  }
+  .sidebar_main {
+    display: none !important; /* Полностью скрываем sidebar */
+  }
+  .services__title{
+    p{
+      font-size: 20px;
+      font-family: "Inter", sans-serif;
+      text-align: center;
+      border-top: 1px #fff solid;
+      padding: 15px;
+    }
+  }
+  .sidebar_popup {
+    z-index: 35 !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    max-width: 300px;
+    background: #242625;
+    padding: 20px;
+    padding-bottom: 300px;
+    box-sizing: border-box;
+    -webkit-box-shadow: -24px 30px 30px 30px rgba(17, 17, 17, 0.39);
+    -moz-box-shadow: -24px 30px 30px 30px rgba(17, 17, 17, 0.39);
+    box-shadow: -24px 30px 30px 30px rgba(17, 17, 17, 0.39);
+    .discount{
+      z-index: 60;
+      display: block;
+      max-width: 100%;
+      max-height: 60px;
+      background: linear-gradient(to right, #ED7BFF 0%, #FFD911 100%);
+      margin-bottom: 30px;
+      border-radius: 5px;
+      p {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        color: #000000;
+        font-family: "Inter", sans-serif;
+      }
+    }
+    .services{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1 0 auto; /* Разделяем пространство между элементами */
+    }
+    .service_card{
+      max-height: 60px;
+      max-width: 100%;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 22px 11px -15px rgba(0, 0, 0, 0.39);
+      -moz-box-shadow: 0px 22px 11px -15px rgba(0, 0, 0, 0.39);
+      box-shadow: 0px 22px 11px -15px rgba(0, 0, 0, 0.39);
+      transition: transform 0.3s ease;
+      &:active {
+        transform: scale(0.95);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.303) 0%, rgba(0, 0, 0, 0.527) 54%, rgba(0, 0, 0, 0.697) 100%);
+        z-index: 1;
+      }
+      &:hover {
+        transform: scale(1.03);
+        z-index: 2;
+      }
+      &:hover::after {
+        background: linear-gradient(to left, #9c710c00 0%, #a4770e11 54%, #ab7c0e98 100%);
+      }
+      span {
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        text-align: center;
+        z-index: 9;
+        font-weight: 400;
+        font-size: 14px;
+        font-family: "Inter", sans-serif;
+        color: #EDEDED;
+      }
+    }
+  }
+  .presentation_page__main {
+    margin: 130px 10px 0px 10px !important;
+    width: 100% !important; /* Занимаем всю ширину */
+  }
+  .houses_grid {
+    max-width: 550px !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 карточки в строке */
+    padding: 10px !important;
+    margin: 0px 40px 0px 0px;
+    gap: 10px !important; /* Уменьшение отступов между карточками */
+  }
+  .houses_grid .house_card {
+    margin: 0 !important; /* Убираем внешние отступы у карточек */
+    padding: 0 !important; /* Уменьшаем внутренние отступы у карточек */
+    box-sizing: border-box !important; /* Включаем padding и border в размеры */
+  }
+  .houses_grid img {
+    display: block; /* Убираем нижние отступы изображений */
+    width: 100% !important; /* Делаем изображение адаптивным */
+    height: auto !important;
+    max-height: 200px !important;
+    box-sizing: border-box !important;
+  }
+  .house_card{
+    max-width: 200px;
+    height: 100%;
+    span{
+      display: block;
+      padding: 5px;
+    }
+  }
+}
+@media (max-width: 1080px) {
+  .houses_grid{
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .presentation_page{
+    max-height: 667px;
+  }
+  .footer{
+    padding: 5px;
+  }
+  .presentation_page__main {
+    margin: 130px 10px 0px 10px !important;
+    width: 100% !important; /* Занимаем всю ширину */
+  }
+  .presentation_flex{
+  }
+  .houses_grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 карточки в строке */
+    padding: 10px !important;
+    gap: 10px !important; /* Уменьшение отступов между карточками */
+  }
+  .houses_grid .house_card {
+    margin: 0 !important; /* Убираем внешние отступы у карточек */
+    padding: 0 !important; /* Уменьшаем внутренние отступы у карточек */
+    box-sizing: border-box !important; /* Включаем padding и border в размеры */
+    margin: 0px 40px 0px 0px;
+  }
+  .houses_grid .house_card img {
+    display: block; /* Убираем нижние отступы изображений */
+    width: 100% !important; /* Делаем изображение адаптивным */
+    height: auto !important;
+    max-height: 200px !important;
+    box-sizing: border-box !important;
+  }
+  .sidebar {
+    display: none !important; /* Полностью скрываем sidebar */
+  }
+}
+//--------PaymentPage
+@media (max-width: 768px) {
+  .payment_page{
+    .sidebar{
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+//---------------------------
+
+//------placeForConstructionPage----
+@media (max-width: 768px) {
+  .placeForConstruction_page{
+    .sidebar{
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .placeForConstruction_page{
+    overflow-y: hidden;
+  }
+  .presentation_flex{
+    max-height: 770px;
+  }
+  .grid_container {
+    display: grid;
+    max-height: 500px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    grid-column-gap: 0px !important;
+    grid-row-gap: 0px !important;
+    justify-items: center;
+  }
+  .grid_image {
+    max-height: 100% !important;
+    max-width: 340px !important;
+    grid-area: 1 / 1 / 2 / 3 !important;
+    height: auto;
+    grid-area: auto;
+    margin-bottom: 40px;
+  }
+  .already_have_plot, .need_find_plot {
+    width: 100%;
+    max-width: 300px;
+    justify-self: center; /* Центровка кнопок */
+  }
+  .grid_text{
+    max-height: 60px !important;
+    max-width: 350px !important;
+  }
+  .already_have_plot {
+    grid-area: 2 / 1 / 3 / 3 !important;
+  }
+  .need_find_plot {
+    grid-area: 3 / 1 / 4 / 3 !important;
+  }
+  .payment_page{
+    .grid_container{
+      max-height: 450px !important;
+      grid-row-gap: 15px !important;
+    }
+    .grid_text{
+      .already_have_plot{
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 1080px) {
+  .presentation_flex{
+    max-height: 1080px;
+    justify-content: space-between;
+  }
+  .grid_container {
+    display: grid;
+    max-height: 450px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
+    grid-column-gap: 0px !important;
+    grid-row-gap: 0px !important;
+    justify-items: center;
+  }
+  .payment_page{
+    grid_container {
+      display: grid;
+      max-height: 350px !important;
+    }
+    .grid_image {
+      max-height: 100% !important;
+      max-width: 250px !important;
+      grid-area: 1 / 1 / 2 / 3 !important;
+      height: auto;
+      grid-area: auto;
+      margin-bottom: 40px;
+    }
+  }
+  .grid_image {
+    max-height: 250px !important;
+    max-width: 100% !important;
+    grid-area: 1 / 1 / 2 / 3 !important;
+    height: auto;
+    grid-area: auto;
+    margin-bottom: 40px;
+  }
+  .already_have_plot, .need_find_plot {
+    width: 100%;
+    max-width: 300px;
+    justify-self: center; /* Центровка кнопок */
+  }
+  .grid_text{
+    max-height: 70px !important;
+    max-width: 350px !important;
+  }
+  .already_have_plot {
+    grid-area: 2 / 1 / 3 / 3 !important;
+  }
+  .need_find_plot {
+    grid-area: 3 / 1 / 4 / 3 !important;
+  }
+  .payment_page{
+    .grid_container{
+      grid-row-gap: 15px !important;
+    }
+    .grid_text{
+      .already_have_plot{
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+//----------------------------------
+
+
+//--------FormPage------------------
+@media (max-width: 768px) {
+.form_page{
+    .footer{
+        display: none;
+        visibility: hidden;
+    }
+    .back_arrow{
+        visibility: hidden;
+    }
+    .form_page__content {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      margin: 0;
+  
+      .form_page__left, .form_page__right {
+        padding: 0;
+        width: 100%;
+      }
+  
+      .form_page__left {
+        margin-bottom: 20px;
+  
+        h2, p {
+          margin: 0;
+          text-align: left;
+        }
+  
+        .back_arrow {
+          margin: 0 auto 20px auto;
+          img {
+            margin-right: 0;
+          }
+        }
+      }
+  
+      .form_page__divider {
+        display: none;
+      }
+  
+      .form_page__right {
+        align-items: center;
+  
+        .discount {
+          align-self: center;
+        }
+  
+        .form {
+          width: 100%;
+  
+          label {
+            width: 100%;
+          }
+  
+          .submit_button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
