@@ -108,10 +108,13 @@ legend {
   width: 100%;
   padding: 10px 20px;
   display: flex; /* Размещаем элементы по краям */
-  align-items: center; /* Выравнивание элементов по вертикали *//* Убедитесь, что цвет фона соответствует дизайну */
+  align-items: center; /* Выравнивание элементов по вертикали */
   z-index: 100; /* Убедитесь, что хедер находится поверх других элементов */
 }
 
+.header.header_homepage {
+  background-color: transparent; /* или любой другой цвет, который вы хотите для главной страницы */
+}
 .navbar__wrap {
   display: flex;
   justify-content: space-between;
@@ -398,7 +401,8 @@ legend {
   min-height: 100vh;
   align-items: center;
   color: white;
-  overflow-y: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .presentation_page__main {
@@ -489,7 +493,7 @@ legend {
 //--------------footer--------------------------------
 .footer {
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   display: flex;

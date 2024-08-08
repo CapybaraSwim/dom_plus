@@ -4,7 +4,7 @@ import { AppContext } from '../context/AppContext';
 import './../index.scss';
 import SidebarPopup from './../components/SidebarPopup';
 
-function Header({ showPopup = true }) {
+function Header({ showPopup = true, isHomePage = false }) {
   const { resetState } = useContext(AppContext);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const popupRef = useRef(null);
@@ -45,7 +45,7 @@ function Header({ showPopup = true }) {
   }, [isPopupOpen]);
 
   return (
-    <header className="header">
+    <header className={`header ${isHomePage ? 'header_homepage' : ''}`}>
       <div className="container">
         <div className="navbar__wrap">
           <Link to="/" onClick={handleLogoClick}>

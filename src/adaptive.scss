@@ -2,6 +2,9 @@
 //-------PresentationPage------
 
 @media (max-width: 768px) {
+  .header{
+    background-color: #303331;
+  }
   .presentation_flex {
     flex-direction: column !important;
   }
@@ -143,17 +146,27 @@
 }
 
 @media (max-width: 480px) {
+  .header{
+    background-color: #303331;
+  }
   .presentation_page{
     max-height: 667px;
   }
   .footer{
     padding: 5px;
   }
+  .payment_page{
+    overflow-x: hidden;
+  }
+  .placeForConstruction_page{
+    overflow-x: hidden;
+  }
   .presentation_page__main {
     margin: 130px 10px 0px 10px !important;
     width: 100% !important; /* Занимаем всю ширину */
   }
-  .presentation_flex{
+  .grid_container{
+    margin-bottom: 30px;
   }
   .houses_grid {
     grid-template-columns: repeat(2, 1fr) !important; /* 2 карточки в строке */
@@ -204,9 +217,17 @@
   .presentation_flex{
     max-height: 770px;
   }
+  .payment_page{
+    overflow-x: hidden;
+  }
+  .placeForConstruction_page{
+    overflow-x: hidden;
+  }
   .grid_container {
+    margin-bottom: 30px;
     display: grid;
     max-height: 500px;
+    max-width: 100%;
     grid-template-columns: repeat(2, 1fr) !important;
     grid-template-rows: repeat(3, 1fr) !important;
     grid-column-gap: 0px !important;

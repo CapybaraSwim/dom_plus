@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import { AppContext } from '../context/AppContext';
+import './../index.scss';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ function HomePage() {
 
   return (
     <div className="home_page">
-      <Header showPopup={false} />
+      <Header showPopup={false} isHomePage={true} />
       <main className="home_page__main">
         <h1>Строительство частного дома от 2.8 млн. рублей</h1>
         <p>
