@@ -5,6 +5,7 @@ import Footer from './Footer';
 import '../index.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
+import LazyLoad from 'react-lazyload';
 
 const area = [
   { id: 1, name: '69,8м2', img: '/img/houses/house1.png' },
@@ -59,7 +60,9 @@ function PresentationPage() {
                   className={`house_card ${selectedHouse === area.id ? 'selected' : ''}`}
                   onClick={() => handleHouseClick(area.id)}
                 >
-                  <img src={area.img} alt={`Дом ${area.id + 1}`} />
+                  <LazyLoad height={200} offset={100}>
+                    <img src={area.img} alt={`Дом ${area.id + 1}`} />
+                  </LazyLoad>
                   <span>{area.name}</span>
                 </div>
               ))}

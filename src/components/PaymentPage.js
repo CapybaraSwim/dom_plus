@@ -35,12 +35,12 @@ const PaymentPage = () => {
         <main className="presentation_page__main">
           <div className="presentation_page__title">
             <Link to="/placeForConstruction" className="back_arrow">
-              <img className="arrow_back" src="/img/Arrow.svg" alt="Назад" />
+              <img className="arrow_back" src="/img/Arrow.svg" alt="Назад" loading="lazy"/>
             </Link>
             <h2>Способ оплаты</h2>
           </div>
           <div className="grid_container">
-            <img src="/img/cash.png" alt="field" className="grid_image" />
+              <img src="/img/cash.png" alt="field" className="grid_image" loading="lazy"/>
             <div
               className={`grid_text already_have_plot ${selectedOption === 'cash' ? 'selected' : ''}`}
               onClick={() => handleOptionClick('cash')}

@@ -22,7 +22,7 @@ export default function SidebarPopup() {
       <div className="services">
         {services.map((service) => (
           <div key={service.id} className="service_card">
-            <img src={service.img} alt={service.name} className={`service_img${service.id}`} />
+            <img src={service.img} alt={service.name} className={`service_img${service.id}`} loading="lazy" />
             <span>{service.name}</span>
           </div>
         ))}

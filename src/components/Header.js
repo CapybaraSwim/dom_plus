@@ -49,7 +49,7 @@ function Header({ showPopup = true }) {
       <div className="container">
         <div className="navbar__wrap">
           <Link to="/" onClick={handleLogoClick}>
-            <img src="/img/logo1.png" alt="logo" className="logo" />
+            <img src="/img/logo1.png" alt="logo" className="logo" loading="lazy"/>
           </Link>
         </div>
       </div>
