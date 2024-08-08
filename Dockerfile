@@ -16,7 +16,7 @@ RUN npm run build
 
 FROM nginx:1.27-alpine-slim
 
-COPY dom_plus/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 
 
 COPY --from=build /app/build /usr/share/nginx/html
