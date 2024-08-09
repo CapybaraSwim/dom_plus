@@ -18,7 +18,7 @@ function App() {
     <AppProvider>
       <Routes>
 
-        <Routes path="/Cookies" element={<Cookies />} />
+        <Route path="/Cookies" element={<Cookies />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/presentation" element={<PresentationPage />} />
         <Route path="/placeForConstruction" element={<PlaceForConstruction/>} />
