@@ -6,7 +6,6 @@ import PresentationPage from './components/PresentationPage';
 import PlaceForConstruction from './components/PlaceForConstruction';
 import PaymentPage from './components/PaymentPage';
 import FormPage from './components/FormPage';
-import {useEffect} from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
 import { getUserDataFromCookies } from './components/Cookies';
