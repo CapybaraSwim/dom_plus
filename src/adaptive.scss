@@ -149,11 +149,12 @@
     background-color: #303331;
   }
   .presentation_page{
-    max-height: 800px;
+    height: 800px;
+    overflow-y: auto;
   }
   .footer{
     padding: 5px;
-    margin-top: 20%;
+    margin-top: 40%;
   }
   .payment_page{
     overflow-x: hidden;
