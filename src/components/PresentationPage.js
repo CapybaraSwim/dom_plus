@@ -63,9 +63,7 @@ function PresentationPage() {
                   className={`house_card ${selectedHouse === area.id ? 'selected' : ''}`}
                   onClick={() => handleHouseClick(area.id)}
                 >
-                  <LazyLoad height={200} offset={100}>
                     <img src={area.img} alt={`Дом ${area.id + 1}`} />
-                  </LazyLoad>
                   <span>{area.name}</span>
                 </div>
               ))}
