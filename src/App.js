@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './index.scss';
 import HomePage from './components/HomePage';
 import PresentationPage from './components/PresentationPage';
