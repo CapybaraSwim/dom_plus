@@ -8,17 +8,17 @@ import { AppContext } from '../context/AppContext';
 import LazyLoad from 'react-lazyload';
 
 const area = [
-  { id: 1, name: '61,7-82,6 м2', img: '/img/houses/house1.png' },
-  { id: 2, name: '82,6-97,5 м2', img: '/img/houses/house2.png' },
-  { id: 3, name: '97,5-125,2 м2', img: '/img/houses/house3.png' },
-  { id: 4, name: '125,2-139,7 м2', img: '/img/houses/house4.png' },
-  { id: 5, name: '139,7-162 м2', img: '/img/houses/house5.png' },
-  { id: 6, name: '99,4-135 м2 (2 этажа)', img: '/img/houses/house6.png' },
-  { id: 7, name: '135-159,2 м2 (2 этажа)', img: '/img/houses/house7.png' },
-  { id: 8, name: '159,2-172 м2 (2 этажа)', img: '/img/houses/house8.png' },
-  { id: 9, name: '172-190,1 м2 (2 этажа)', img: '/img/houses/house9.png' },
-  { id: 10, name: '190,1-261,1 м2 (2 этажа)', img: '/img/houses/house10.png' },
-  { id: 11, name: '261,1-342,9 м2 (2 этажа)', img: '/img/houses/house11.png' },
+  { id: 1, name: '61,7-82,6 м2', img: '/img/houses/house1.webp' },
+  { id: 2, name: '82,6-97,5 м2', img: '/img/houses/house2.webp' },
+  { id: 3, name: '97,5-125,2 м2', img: '/img/houses/house3.webp' },
+  { id: 4, name: '125,2-139,7 м2', img: '/img/houses/house4.webp' },
+  { id: 5, name: '139,7-162 м2', img: '/img/houses/house5.webp' },
+  { id: 6, name: '99,4-135 м2 (2 этажа)', img: '/img/houses/house6.webp' },
+  { id: 7, name: '135-159,2 м2 (2 этажа)', img: '/img/houses/house7.webp' },
+  { id: 8, name: '159,2-172 м2 (2 этажа)', img: '/img/houses/house8.webp' },
+  { id: 9, name: '172-190,1 м2 (2 этажа)', img: '/img/houses/house9.webp' },
+  { id: 10, name: '190,1-261,1 м2 (2 этажа)', img: '/img/houses/house10.webp' },
+  { id: 11, name: '261,1-342,9 м2 (2 этажа)', img: '/img/houses/house11.webp' },
 ];
 
 function PresentationPage() {

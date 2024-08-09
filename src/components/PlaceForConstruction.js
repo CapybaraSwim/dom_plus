@@ -32,7 +32,7 @@ const PlaceForConstruction = () => {
             <h2>Выбрали место для строительства?</h2>
           </div>
           <div className="grid_container">
-            <img src="/img/field.png" alt="field" className="grid_image" loading="lazy" />
+            <img src="/img/field.webp" alt="field" className="grid_image" loading="lazy" />
             <div
               className={`grid_text already_have_plot ${selectedOption === 'have' ? 'selected' : ''}`}
               onClick={() => handleOptionClick('have')}
