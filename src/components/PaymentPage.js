@@ -32,7 +32,7 @@ const PaymentPage = () => {
             <h2>Способ оплаты</h2>
           </div>
           <div className="grid_container">
-              <img src="/img/cash.png" alt="field" className="grid_image" loading="lazy"/>
+              <img src="/img/cash.webp" alt="field" className="grid_image" loading="lazy"/>
             <div
               className={`grid_text already_have_plot ${selectedOption === 'cash' ? 'selected' : ''}`}
               onClick={() => handleOptionClick('cash')}
