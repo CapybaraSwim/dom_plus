@@ -7,9 +7,14 @@ import PaymentPage from './components/PaymentPage';
 import FormPage from './components/FormPage';
 import { Routes, Route } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
+import { getUserDataFromCookies } from './components/Cookies';
 
 
 function App() {
+    useEffect(() => {
+        const userData = getUserDataFromCookies();
+        console.log('User Data from Cookies:', userData);
+    }, []);
   return (
     <AppProvider>
       <Routes>
