@@ -13,23 +13,15 @@ const PaymentPage = () => {
   useEffect(() => {
     updateState('discount', 7);
   }, []);
+
   const handleOptionClick = (option) => {
     setSelectedOption(option);
-  };
-
-  const handlePageClick = (event) => {
-    if (!event.target.closest('.grid_text')) {
-      setSelectedOption(null);
-    }
-  };
-
-  const handleNextClick = () => {
-    updateState('paymentMethod', selectedOption);
-    navigate('/formPage');
+    updateState('paymentMethod', option);
+    navigate('/formPage'); // Переход на следующую страницу
   };
 
   return (
-    <div className="payment_page" onClick={handlePageClick}>
+    <div className="payment_page">
       <Header />
       <div className="presentation_flex">
         <main className="presentation_page__main">
@@ -57,7 +49,7 @@ const PaymentPage = () => {
         </main>
         <Sidebar />
       </div>
-      <Footer progress={66} handleNextClick={handleNextClick} />
+      <Footer progress={66} />
     </div>
   );
 };

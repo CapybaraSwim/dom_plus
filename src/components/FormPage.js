@@ -65,7 +65,7 @@ const FormPage = () => {
           </form>
         </div>
       </div>
-      <Footer progress={progress} finalStep={true} />
+      <Footer progress={progress} finalStep={false} />
     </div>
   );
 };

@@ -13,23 +13,15 @@ const PlaceForConstruction = () => {
   useEffect(() => {
     updateState('discount', 3);
   }, []);
+
   const handleOptionClick = (option) => {
     setSelectedOption(option);
-  };
-
-  const handlePageClick = (event) => {
-    if (!event.target.closest('.grid_text')) {
-      setSelectedOption(null);
-    }
-  };
-
-  const handleNextClick = () => {
-    updateState('placeForConstruction', selectedOption);
-    navigate('/paymentPage');
+    updateState('placeForConstruction', option);
+    navigate('/paymentPage'); // Переход на следующую страницу
   };
 
   return (
-    <div className="placeForConstruction_page" onClick={handlePageClick}>
+    <div className="placeForConstruction_page">
       <Header />
       <div className="presentation_flex">
         <main className="presentation_page__main">
@@ -57,7 +49,7 @@ const PlaceForConstruction = () => {
         </main>
         <Sidebar />
       </div>
-      <Footer progress={33} handleNextClick={handleNextClick} />
+      <Footer progress={33} />
     </div>
   );
 };
