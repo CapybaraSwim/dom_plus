@@ -81,29 +81,29 @@ const FormPage = () => {
     try {
       const leadData = {
         name: 'Новая заявка с сайта',
-        custom_fields_values: [
-          {
-            field_id: PHONE_FIELD_ID, // Замените на ваш ID поля для телефона в amoCRM
-            values: [{ value: phone }],
-          },
-        ],
-        contacts: [
-          {
-            name,
-            custom_fields_values: [
-              {
-                field_id: NAME_FIELD_ID, // Замените на ваш ID поля для имени в amoCRM
-                values: [{ value: name }],
-              },
-            ],
-          },
-        ],
+        // custom_fields_values: [
+        //   {
+        //     field_id: PHONE_FIELD_ID, // Замените на ваш ID поля для телефона в amoCRM
+        //     values: [{ value: phone }],
+        //   },
+        // ],
+        // contacts: [
+        //   {
+        //     name,
+        //     custom_fields_values: [
+        //       {
+        //         field_id: NAME_FIELD_ID, // Замените на ваш ID поля для имени в amoCRM
+        //         values: [{ value: name }],
+        //       },
+        //     ],
+        //   },
+        // ],
       };
 
       if (state.placeForConstruction === 'have') {
         leadData.custom_fields_values.push({
-          field_id: ADDRESS_FIELD_ID, // Замените на ваш ID поля для адреса в amoCRM
-          values: [{ value: address }],
+          // field_id: ADDRESS_FIELD_ID, // Замените на ваш ID поля для адреса в amoCRM
+          // values: [{ value: address }],
         });
       }
 
