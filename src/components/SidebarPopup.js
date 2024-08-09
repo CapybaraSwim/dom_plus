@@ -4,12 +4,12 @@ import { AppContext } from '../context/AppContext';
 export default function SidebarPopup() {
   const { state } = useContext(AppContext);
   const services = [
-    { id: 1, name: 'Создание проекта', img: '/img/sidebar/service1.png' },
-    { id: 2, name: 'Ремонт под ключ', img: '/img/sidebar/service2.png' },
-    { id: 3, name: 'Поиск земельных участков', img: '/img/sidebar/service3.png' },
-    { id: 4, name: 'Юридическая помощь', img: '/img/sidebar/service4.png' },
-    { id: 5, name: 'Подключение коммуникаций', img: '/img/sidebar/service5.png' },
-    { id: 6, name: 'Ландшафтный дизайн', img: '/img/sidebar/service6.png' },
+    { id: 1, name: 'Создание проекта', img: '/img/sidebar/service1.webp' },
+    { id: 2, name: 'Ремонт под ключ', img: '/img/sidebar/service2.webp' },
+    { id: 3, name: 'Поиск земельных участков', img: '/img/sidebar/service3.webp' },
+    { id: 4, name: 'Юридическая помощь', img: '/img/sidebar/service4.webp' },
+    { id: 5, name: 'Подключение коммуникаций', img: '/img/sidebar/service5.webp' },
+    { id: 6, name: 'Ландшафтный дизайн', img: '/img/sidebar/service6.webp' },
   ];
   return (
     <aside className="sidebar_popup">
