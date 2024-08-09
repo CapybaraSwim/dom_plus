@@ -123,7 +123,7 @@ const FormPage = () => {
                   {errors.phone && <span className="error">{errors.phone}</span>}
                 </label>
                 <button type="submit" className="submit_button">
-                  Получить результаты
+                  Отправить
                 </button>
               </form>
             </>
