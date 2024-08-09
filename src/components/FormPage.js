@@ -22,10 +22,10 @@ const FormPage = () => {
 
   const getCustomFields = async () => {
     try {
-      const response = await fetch('https://your-amocrm-domain.amocrm.ru/api/v4/leads/custom_fields', {
+      const response = await fetch('https://petrosyan412.amocrm.ru/leads/pipeline/?skip_filter=Y', {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer YOUR_ACCESS_TOKEN`, // Замените на актуальный токен доступа
+          'Authorization': `eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImFlOGJkNzE1M2U0NWY4ZWM5MjA5NTQzMjgzNjhiZGVlMjRjZDJlY2Q1NmIyYmQyMTMzYWRmYjJmYjQ3YzdmNWIzMWRiODJhNjNmYmE4OWFjIn0.eyJhdWQiOiI4ZTA0MWVhMi01M2QzLTQ1ZjgtYmE3NC0xYzQzZThlMWU2NDgiLCJqdGkiOiJhZThiZDcxNTNlNDVmOGVjOTIwOTU0MzI4MzY4YmRlZTI0Y2QyZWNkNTZiMmJkMjEzM2FkZmIyZmI0N2M3ZjViMzFkYjgyYTYzZmJhODlhYyIsImlhdCI6MTcyMzIxOTI3NCwibmJmIjoxNzIzMjE5Mjc0LCJleHAiOjE4MzAyOTc2MDAsInN1YiI6IjExMzcyODc0IiwiZ3JhbnRfdHlwZSI6IiIsImFjY291bnRfaWQiOjMxODkwOTgyLCJiYXNlX2RvbWFpbiI6ImFtb2NybS5ydSIsInZlcnNpb24iOjIsInNjb3BlcyI6WyJjcm0iLCJmaWxlcyIsImZpbGVzX2RlbGV0ZSIsIm5vdGlmaWNhdGlvbnMiLCJwdXNoX25vdGlmaWNhdGlvbnMiXSwiaGFzaF91dWlkIjoiMDc5NDVhMGYtYmI4Yy00MTQ4LTlhNjUtM2FjY2ZkMjIwZjgzIn0.RMppDhkMYWJqT1hRe896PZfqKtfHWGFORZxfra0CaQ9ZgB0EqKmna3Rg_3bv-rJTiY630KSIiy9pmEkx7ifQvDV-Eh0iKkAiNBdgPU4u7p9DKZ4jieFyt9Vcv9Bb7B_KLZIH-tmjdnMN891IVrSjbNImqe7h09sGCntU7qHxofDHb6IlV_0UWQNmLzoLLM1w--k-Y2gasqJHn8lFG9Aci_8iZjFpXNvUngN_YsKU2S9LNx1e0Ff3HMWZbnluQLM4riY1TP5lY1C7vrE7EB_pO5_JA-V-RAVM8s9kSeo0TmYJJ_w4lc3BgM4gAaVD_9mC-QKyZXOrOqMxpgWD4kGjHQ`, // Замените на актуальный токен доступа
           'Content-Type': 'application/json'
         }
       });
