@@ -7,7 +7,7 @@ const headers = {
 const createLead = async () => {
 
     try {
-        const response = await fetch('https://petrosyan412.amocrm.ru/leads/pipeline/8482894/?skip_filter=Y', {
+        const response = await fetch('https://petrosyan412.amocrm.ru/api/v4/leads', {
             method: 'POST',
             headers: headers,
 
