@@ -14,7 +14,10 @@ import { createLead } from './components/Cookies';
 
 function App() {
     useEffect(() => {
-        createLead();  // Вызов функции при монтировании компонента
+        fetch('http://localhost:3001/api/hello')
+            .then(response => response.text())
+            .then(data => console.log(data))
+            .catch(error => console.error('Ошибка:', error));
     }, []);
   return (
     <AppProvider>
