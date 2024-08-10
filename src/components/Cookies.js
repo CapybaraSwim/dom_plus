@@ -5,13 +5,9 @@ const headers = {
 };
 
 const createLead = async () => {
-    const leadData = {
-        name: 'Новая заявка с сайта',
-        // другие данные сделки
-    };
 
     try {
-        const response = await fetch('https://petrosyan412.amocrm.ru/api/v4/leads', {
+        const response = await fetch('https://petrosyan412.amocrm.ru', {
             method: 'POST',
             headers: headers,
 
@@ -20,10 +16,9 @@ const createLead = async () => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         else console.log('Вы подключились к серверу')
-      
+
     } catch (error) {
         console.error('Ошибка при отправке заявки:', error.message);
     }
 };
-
-export { createLead };
+export {createLead};
