@@ -16,8 +16,8 @@ const createLead = async () => {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        else console.log('Вы подключились к серверу')
-
+        else console.log('Вы подключились к серверу');
+        console.log('идем в catch');
     } catch (error) {
         console.error('Ошибка при отправке заявки:', error.message);
     }
