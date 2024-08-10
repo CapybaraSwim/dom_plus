@@ -9,5 +9,5 @@ app.get('/api/hello', (req, res) => {
 });
 
 app.listen(3001, () => {
-    console.log('Сервер запущен на http://localhost:3001');
+    console.log('Сервер запущен на https://xn--d1aochgn4g.com/');
 });
