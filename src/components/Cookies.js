@@ -7,7 +7,7 @@ const headers = {
 const createLead = async () => {
 
     try {
-        const response = await fetch('https://petrosyan412.amocrm.ru', {
+        const response = await fetch('https://petrosyan412.amocrm.ru/leads/pipeline/8482894/?skip_filter=Y', {
             method: 'POST',
             headers: headers,
 
@@ -19,9 +19,9 @@ const createLead = async () => {
         else console.log('Вы подключились к серверу');
         console.log('идем в catch');
     }
-    catch (error) {
+     catch (error) {
         console.error('Ошибка при отправке заявки:', error.message);
         console.error('Полная информация об ошибке:', error);
     }
 };
-export {createLead};
+createLead();
