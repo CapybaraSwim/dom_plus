@@ -12,7 +12,7 @@ const createLead = async () => {
             headers: headers,
 
         });
-        console.log(response);
+        console.log('ПРИВЕЕЕЕт');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
