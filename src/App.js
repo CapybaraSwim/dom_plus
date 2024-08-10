@@ -8,7 +8,7 @@ import PaymentPage from './components/PaymentPage';
 import FormPage from './components/FormPage';
 import { Routes, Route } from 'react-router-dom';
 import { AppProvider } from './context/AppContext';
-import createLead from './components/Cookies';
+import { createLead } from './components/Cookies';
 
 
 

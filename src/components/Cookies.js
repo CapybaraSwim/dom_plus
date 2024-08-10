@@ -24,4 +24,4 @@ const createLead = async () => {
     }
 };
 
-createLead();
+export { createLead };
