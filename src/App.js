@@ -14,7 +14,7 @@ import { createLead } from './components/Cookies';
 
 function App() {
     useEffect(() => {
-        fetch('https://xn--d1aochgn4g.com/')
+        fetch('https://xn--d1aochgn4g.com/api/hello')
             .then(response => response.text())
             .then(data => console.log(data))
             .catch(error => console.error('Ошибка:', error));
