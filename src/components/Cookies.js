@@ -18,8 +18,10 @@ const createLead = async () => {
         }
         else console.log('Вы подключились к серверу');
         console.log('идем в catch');
-    } catch (error) {
+    }
+    catch (error) {
         console.error('Ошибка при отправке заявки:', error.message);
+        console.error('Полная информация об ошибке:', error);
     }
 };
 export {createLead};
