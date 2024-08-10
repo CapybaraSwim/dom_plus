@@ -24,4 +24,4 @@ const createLead = async () => {
         console.error('Полная информация об ошибке:', error);
     }
 };
-createLead();
+export {createLead};
