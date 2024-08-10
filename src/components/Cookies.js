@@ -14,13 +14,13 @@ const createLead = async () => {
         const response = await fetch('https://petrosyan412.amocrm.ru/api/v4/leads', {
             method: 'POST',
             headers: headers,
-            body: JSON.stringify([leadData]),
+
         });
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const data = await response.json();
-        console.log('Заявка успешно отправлена:', data);
+        else console.log('Вы подключились к серверу')
+      
     } catch (error) {
         console.error('Ошибка при отправке заявки:', error.message);
     }
