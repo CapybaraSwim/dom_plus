@@ -5,7 +5,7 @@ FROM php:8.1-apache
 WORKDIR /var/www/html
 
 # Изменяем зеркало для apt
-RUN echo 'deb http://mirror.yandex.ru/debian/ bookworm main contrib non-free non-free-firmware deb-src http://mirror.yandex.ru/debian/ bookworm main contrib non-free non-free-firmware deb http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware deb-src http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware deb http://mirror.yandex.ru/debian/ bookworm-updates main contrib non-free non-free-firmware deb-src http://mirror.yandex.ru/debian/ bookworm-updates main contrib non-free non-free-firmware' > /etc/apt/sources.list
+RUN echo 'deb https://mirror.docker.ru bookworm main contrib non-free non-free-firmware deb-src https://mirror.docker.ru/debian/ bookworm main contrib non-free non-free-firmware deb http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware deb-src http://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware deb https://mirror.docker.ru/debian/ bookworm-updates main contrib non-free non-free-firmware deb-src https://mirror.docker.ru/debian/ bookworm-updates main contrib non-free non-free-firmware' > /etc/apt/sources.list
 
 # Устанавливаем необходимые инструменты
 RUN apt-get update && apt-get install -y \
