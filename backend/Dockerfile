@@ -5,11 +5,13 @@ FROM php:8.1-apache
 WORKDIR /var/www/html
 
 
-# Устанавливаем необходимые инструменты
-RUN apt-get update && apt-get install -y \
-    unzip \
-    curl 
-    
+# Use a different mirror
+RUN sed -i 's/http:\/\/deb.debian.org\/debian/http:\/\/ftp.debian.org\/debian/g' /etc/apt/sources.list
+
+# Update and install packages
+RUN apt-get update && \
+    apt-get install -y unzip curl && \
+    rm -rf /var/lib/apt/lists/*
 
 # Копируем файлы приложения в контейнер
 COPY . .
