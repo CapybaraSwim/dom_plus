@@ -6,7 +6,6 @@ WORKDIR /var/www/html
 
 # Устанавливаем необходимые инструменты
 RUN apt-get update && apt-get install -y \
-    git \
     unzip \
     curl \
     && rm -rf /var/lib/apt/lists/*
