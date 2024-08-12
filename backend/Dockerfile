@@ -1,23 +1,17 @@
-# Используем официальный образ PHP с Apache
-FROM php:8.1-apache
+# Используем официальный образ PHP с FPM
+FROM php:8.0-fpm-alpine
 
 # Устанавливаем рабочую директорию
 WORKDIR /var/www/html
 
-
-# Use a different mirror
-RUN sed -i 's/http:\/\/deb.debian.org\/debian/http:\/\/ftp.debian.org\/debian/g' /etc/apt/sources.list
-
-# Update and install packages
-RUN apt-get update && \
-    apt-get install -y unzip curl && \
-    rm -rf /var/lib/apt/lists/*
-
-# Копируем файлы приложения в контейнер
+# Копируем файлы приложения
 COPY . .
 
-# Открываем порт 80
-EXPOSE 80
+# Устанавливаем необходимые расширения PHP
+RUN docker-php-ext-install pdo pdo_mysql
 
-# Запускаем Apache
-CMD ["apache2-foreground"]
+# Открываем порт 9000 для PHP-FPM
+EXPOSE 9000
+
+# Запускаем PHP-FPM
+CMD ["php-fpm"]
