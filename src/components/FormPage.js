@@ -74,7 +74,14 @@ const FormPage = () => {
               <div className="discount">
                 <span>Ваша скидка: 10%</span>
               </div>
-              <form className="form" onSubmit={handleSubmit} noValidate>
+              <iframe
+                src="index.html"
+                width="100%"
+                height="600px"
+                title="Form"
+                style={{ border: 'none' }}
+              ></iframe>
+              {/*<form className="form" onSubmit={handleSubmit} noValidate>
                 <label>
                   Введите ФИО:
                   <input 
@@ -125,7 +132,7 @@ const FormPage = () => {
                 <button type="submit" className="submit_button">
                   Отправить
                 </button>
-              </form>
+              </form>*/}
             </>
           )}
         </div>
