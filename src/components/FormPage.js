@@ -74,13 +74,24 @@ const FormPage = () => {
               <div className="discount">
                 <span>Ваша скидка: 10%</span>
               </div>
-              <iframe
-                src="../form.html"
-                width="100%"
-                height="600px"
-                title="Form"
-                style={{ border: 'none' }}
-              ></iframe>
+              {state.placeForConstruction === 'have' ? (
+                <iframe
+                  src="../form.html"
+                  width="100%"
+                  height="600px"
+                  title="Form"
+                  style={{ border: 'none' }}
+                ></iframe>
+              ) : (
+                <iframe
+                  src="../form2.html"
+                  width="100%"
+                  height="600px"
+                  title="Form2"
+                  style={{ border: 'none' }}
+                ></iframe>
+              )}
+            
               {/*<form className="form" onSubmit={handleSubmit} noValidate>
                 <label>
                   Введите ФИО:
