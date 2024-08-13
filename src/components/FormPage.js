@@ -75,7 +75,7 @@ const FormPage = () => {
                 <span>Ваша скидка: 10%</span>
               </div>
               <iframe
-                src="index.html"
+                src="../form.html"
                 width="100%"
                 height="600px"
                 title="Form"
