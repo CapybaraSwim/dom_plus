@@ -7,8 +7,6 @@ COPY package*.json ./
 
 RUN npm install
 
-RUN node crm.js
-
 COPY . .
 
 
